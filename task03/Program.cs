@@ -1,16 +1,11 @@
-﻿using System;
-
-namespace task03
+﻿namespace task03
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            //Создать класс Employee.
-            //В теле класса создать пользовательский конструктор, который принимает два строковых аргумента,
-            //и инициализирует поля, соответствующие фамилии и имени сотрудника.
-            //Создать метод рассчитывающий оклад сотрудника(в зависимости от должности и стажа) и налоговый сбор.
-            //Написать программу, которая выводит на экран информацию о сотруднике(фамилия, имя, должность), оклад и налоговый сбор.
+            Employee employee = new("First", "Last");
+            employee.PrintEmployeeInfo();
         }
     }
 }
