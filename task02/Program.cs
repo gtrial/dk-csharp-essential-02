@@ -1,15 +1,18 @@
-﻿namespace task02
+﻿using System;
+
+namespace task02
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            //Создать класс Converter.
-            //В теле класса создать пользовательский конструктор, который принимает три вещественных аргумента,
-            //и инициализирует поля соответствующие курсу 3 - х основных валют, по отношению к гривне –
-            //public Converter(double usd, double eur, double rub).
-            //Написать программу, которая будет выполнять конвертацию из гривны в одну из указанных валют,
-            //также программа должна производить конвертацию из указанных валют в гривну.
+            Converter converter = new(1 / 28.1, 1 / 33.2, 1 / 0.4);
+            Console.WriteLine($"UAH amount:");
+            double uah = double.Parse(Console.ReadLine() ?? string.Empty);
+            Console.WriteLine($"USD: {uah * converter.Usd}");
+            Console.WriteLine($"USD amount:");
+            double usd = double.Parse(Console.ReadLine() ?? string.Empty);
+            Console.WriteLine($"UAH: {usd / converter.Usd}");
         }
     }
 }
