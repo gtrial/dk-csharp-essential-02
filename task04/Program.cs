@@ -1,18 +1,11 @@
-﻿using System;
-
-namespace task04
+﻿namespace task04
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            //Создать класс Invoice.
-            //В теле класса создать три поля int account, string customer, string provider,
-            //которые должны быть проинициализированы один раз(при создании экземпляра данного класса)
-            //без возможности их дальнейшего изменения.
-            //В теле класса создать два закрытых поля string article, int quantity
-            //Создать метод расчета стоимости заказа с НДС и без НДС.
-            //Написать программу, которая выводит на экран сумму оплаты заказанного товара с НДС или без НДС.
+            Invoice invoice = new(10, "Customer 10", "Provider 2");
+            invoice.PrintInvoice();
         }
     }
 }
