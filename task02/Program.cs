@@ -6,7 +6,7 @@ namespace task02
     {
         private static void Main()
         {
-            Converter converter = new(1 / 28.1, 1 / 33.2, 1 / 0.4);
+            Converter converter = new Converter(1 / 28.1, 1 / 33.2, 1 / 0.4);
             Console.WriteLine($"UAH amount:");
             double uah = double.Parse(Console.ReadLine() ?? string.Empty);
             Console.WriteLine($"USD: {uah * converter.Usd}");

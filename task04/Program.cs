@@ -4,7 +4,7 @@
     {
         private static void Main()
         {
-            Invoice invoice = new(10, "Customer 10", "Provider 2");
+            Invoice invoice = new Invoice(10, "Customer 10", "Provider 2");
             invoice.PrintInvoice();
         }
     }

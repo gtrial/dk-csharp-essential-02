@@ -4,7 +4,7 @@
     {
         private static void Main()
         {
-            Employee employee = new("First", "Last");
+            Employee employee = new Employee("First", "Last");
             employee.PrintEmployeeInfo();
         }
     }
